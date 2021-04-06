@@ -1,5 +1,7 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
+from codingsession.models import CodingSession
 
 # Create your views here.
 def codingsessionspage(request):
-    return HttpResponse('<h1>Hello World</h1>')
+    coding_sessions = CodingSession.objects.all()
+    return render(request, template_name="codingsession/all.html")

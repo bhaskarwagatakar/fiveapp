@@ -3,5 +3,6 @@ from codingsession import views
 
 
 urlpatterns=[
+    path('', views.codingsessionspage, name='codingsessionspage'),
     path('home/', views.codingsessionspage, name='codingsessionspage')
     ]
